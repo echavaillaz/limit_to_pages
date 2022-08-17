@@ -1,0 +1,14 @@
+---
+
+services:
+  _defaults:
+    autoconfigure: true
+    autowire: true
+    public: false
+  Pint\LimitToPages\:
+    resource: ../Classes/*
+  Pint\LimitToPages\Command\LimitToPagesCommand:
+    tags:
+      -
+        command: limit_to_pages:generate
+        name: console.command
